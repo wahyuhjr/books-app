@@ -1,12 +1,18 @@
 import React from 'react';
-import Logo from '../../assets/images/logo.png';
+import Logo from '../../../assets/images/logo.png';
+import {
+  BiHomeAlt,
+  BiUser,
+  BiBook,
+  BiPencil
+} from 'react-icons/bi';
 
 const Sidebar = () => {
   const menu =[
-    {name: "Home", icon: ""},
-    {name: "Account", icon: ""},
-    {name: "Book", icon: ""},
-    {name: "Author", icon: ""},
+    {name: "Home", icon: <BiHomeAlt />},
+    {name: "Account", icon: <BiUser/>},
+    {name: "Book", icon: <BiBook/>},
+    {name: "Author", icon: <BiPencil/>},
   ];
 
   return (
@@ -17,11 +23,12 @@ const Sidebar = () => {
       </div>
       <div>
         <ul>
-        <div className="mb-6 font-semibold text-lg">Menu</div>
+        <div className="mb-6 font-bold text-lg">Menu</div>
         {menu.map((val, index) => {
           return(
-            <li key={index} className="mb-7">
-              {val.name}
+            <li key={index} className="mb-7 flex flex-row items-center">
+              <div className=" mr-2 text-xl">{val.icon}</div>
+              <div className="">{val.name}</div>
             </li>
           );
         })}
