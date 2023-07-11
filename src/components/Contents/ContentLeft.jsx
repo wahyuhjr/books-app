@@ -1,14 +1,7 @@
 import React from 'react'
 import { BiCreditCard, BiDoughnutChart, BiHome, BiSearch, BiUser } from 'react-icons/bi';
+import Card from '../Card';
 
-const Card = (props) => {
-    return(
-        <div className={`rounded-xl ${props.txtColor} ${props.bgColor} bg-opacity-10 p-5 w-40 h-40`}>
-            {props.icon}
-            {props.label}
-        </div>  
-    );
-}
 
 const ContentLeft = () => {
   return (

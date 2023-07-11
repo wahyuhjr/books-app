@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import './index.css'
 import {
   createBrowserRouter,
@@ -9,19 +8,23 @@ import {
 import Login from './components/pages/Login/index.jsx';
 import Dashboard from './components/pages/Dashboard/index.jsx';
 import Register from './components/pages/Register/index.jsx';
+import ErrorPage from './components/pages/Error';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Dashboard/>,
+    errorElement: <ErrorPage/>
   },
   {
     path: "/login",
     element: <Login/>,
+    errorElement: <ErrorPage/>
   },
   {
     path: "/register",
     element: <Register/>,
+    errorElement: <ErrorPage/>
   },
 ]);
 
