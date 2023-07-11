@@ -1,7 +1,7 @@
 import React from 'react'
 import LoginImg from '../../../assets/images/login.png';
 import InputForm from '../../Input';
-
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   
@@ -29,7 +29,7 @@ const Login = () => {
                 <button className="bg-[#002D74] text-white py-2 rounded-lg hover:shadow-2xl">Login</button>
                </form>
                <div className="pt-4">
-                  <p className="text-sm text-center">Don't have a account? <span className="text-[#002D74]">Sign up</span></p>
+                  <p className="text-sm text-center">Don't have a account?{""} <Link to="/register" className="text-[#002D74]">Sign up</Link></p>
                </div>
             </div>
             <div className="w-1/2 p-5">
@@ -40,4 +40,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default Login;

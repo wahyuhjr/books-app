@@ -12,6 +12,16 @@ import ErrorPage from './components/pages/Error';
 
 const router = createBrowserRouter([
   {
+    path: "/login",
+    element: <Login/>,
+    errorElement: <ErrorPage/>
+  },
+  {
+    path: "/register",
+    element: <Register/>,
+    errorElement: <ErrorPage/>
+  },
+  {
     path: "/",
     element: <Dashboard/>,
     errorElement: <ErrorPage/>
@@ -23,6 +33,26 @@ const router = createBrowserRouter([
   },
   {
     path: "/register",
+    element: <Register/>,
+    errorElement: <ErrorPage/>
+  },
+  {
+    path: "/register",
+    element: <Register/>,
+    errorElement: <ErrorPage/>
+  },
+  {
+    path: "/account",
+    element: <Register/>,
+    errorElement: <ErrorPage/>
+  },
+  {
+    path: "/book",
+    element: <Register/>,
+    errorElement: <ErrorPage/>
+  },
+  {
+    path: "/author",
     element: <Register/>,
     errorElement: <ErrorPage/>
   },
